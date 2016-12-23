@@ -42,75 +42,97 @@ img{
 
 .letter{
     position: fixed;
-    z-index: 5;
+    z-index: 20;
     width: 100%;
     height: 100%;
     overflow:hidden;
+    box-shadow: 0.14rem 0.14rem 0.36rem #000;
 }
-.letter-top{
-    width: 99%;
-    height: 50%;
-    border: 2px solid black;
-    background: darkred;
-    position: absolute;
-    top: 0;
+.letter img{
+    width: 100%;
+    height: 100%;
 }
-.letter-bottom{
-    width: 99%;
-    height: 49%;
-    border: 2px solid blue;
-    background: darkred;
-    position: absolute;
-    bottom: 0;
+.lettermove{
+    animation: move 5s ease;
+}
+@keyframes move {
+    from{top: 0}
+    to{top: 100%}
 }
 .open{
     position: absolute;
-    top: 46%;
-    left: 25%;
-    border: 1px solid yellow;
+    bottom: 13%;
+    left: 43%;
     z-index: 9;
     background: yellowgreen;
     color: #fff;
+    font-size: .53rem;
+    opacity: 0;
+    filter:alpha(opacity=0);
 }
+
 .head{
     width: 100%;
-    height: 1.1rem;
+    height: 4rem;
     text-align: center;
-    padding: .3rem 0;
+    position: relative;
 }
-.head a{
-    display: inline-block;
-    width: 13%;
+.head li{
+    position: absolute;
 }
-.head a img{
+.head .head1,
+.head .head2,
+.head .head3,
+.head .head4
+{
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+.head img{
     width: 100%;
 }
 
 .main{
-    border: .02rem solid gray;
+    border: .02rem solid #D9B882;
     width: 88%;
-    margin: 0 auto;
+    margin: 1rem auto;
     margin-bottom: .2rem;
     height:100%;
     clear: both;
+}
+.main .shadow{
+    box-shadow: 0.14rem 0.14rem 0.36rem #000;
+    margin-top: .35rem;
+}
+.main li{
+    position: relative;
+}
+.main li img{
+    vertical-align: bottom;
+}
+.main .f1{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
 }
 .main1{
     width: 100%;
     margin: 0 auto;
     position: relative;
-    margin-top: .15rem;
 }
 .main .first{
     margin-top: 0;
 }
 .main1 img{
     width: 100%;
+    height: 100%;
 }
 .main2{
     width: 100%;
     margin: 0 auto;
     position: relative;
-    margin-top: .15rem;
     clear: both;
 }
 .main2 img{
@@ -119,34 +141,24 @@ img{
 .contant{
     height: 100%;
 }
-.wrapper #end{
-    margin-bottom: 0;
-}
 .footer{
-    width: 87.6%;
-    margin: 0 auto;
-    height: 3.3rem;
-    border-top: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 0;
-    margin-top: -.21rem;
-    position: relative;
+    width: 100%;
+    margin-top: .35rem;
 }
-.footer span{
-    display: inline-block;
-    width: 33%;
-    position: absolute;
-    margin: 0 auto;
-    left: 34%;
-    top: 22%;
-}
+
 .footer img{
     width: 100%;
 }
-.four,.five,.six,.seven,#end,.footer,.arrow{
+.three,.four,.five,.six,.seven,.eight,#end,.footer,.arrow{
     display: none;
+}
+.f14,
+.f15,
+.f16,
+.f17,
+.f18,
+.f19
+{
     opacity: 0;
     filter:alpha(opacity=0);
 }
@@ -156,7 +168,6 @@ img{
     height: 100%;
     background: burlywood;
     font-size: 30px;
-    border: 1px solid red;
     display: none;
     opacity: 0;
     filter:alpha(opacity=0);
@@ -172,22 +183,14 @@ img{
 }
 
 .commont{
-    animation: three 4s linear;
+    animation: three 2s linear;
 }
 @keyframes three {
     from{transform: scale(0.1);}
     to{transform: scale(1);}
 }
-.boss{
-    animation: four 2s linear;
-}
-@keyframes four {
-    from{transform: rotate(0deg);}
-    to{transform: rotate(360deg);}
-}
 
 .arrow{
-    border: 1px solid red;
     display: flex;
     height: 1rem;
     flex-direction: column;
@@ -197,7 +200,7 @@ img{
 }
 @keyframes  first{
     from{transform: scale(0.5);}
-    to{transform: scale(2);}
+    to{transform: scale(1.5);}
 }
 .arrow1{
     position: absolute;
@@ -210,3 +213,11 @@ img{
     width: 100%;
     animation: first 1s linear 1s infinite;
 }
+.text{
+    animation: six 4s linear;
+}
+@keyframes six {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+

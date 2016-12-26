@@ -1,0 +1,346 @@
+html,body,div,ul,li{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+html{
+    background: #1b3856;
+}
+li{
+    list-style-type: none;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    background: #fdfcfc;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    z-index: 100;
+    opacity: 1;
+    filter:alpha(opacity=1);
+    line-height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+}
+.box img{
+    position: absolute;
+    left: 34%;
+    top: 39%;
+}
+html{
+    font-size: 13.02vw;
+}
+img{
+    border: none;
+}
+
+.letter{
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    background: url('images/letter.png') no-repeat;
+    background-size: 100% 100%;
+}
+.letter img{
+    width: 100%;
+    height: 100%;
+}
+.lettermove{
+    animation: move 5s ease;
+}
+@keyframes move {
+    from{top: 0}
+    to{top: 100%}
+}
+.open{
+    position: absolute;
+    bottom: 13%;
+    left: 43%;
+    z-index: 9;
+    font-size: .53rem;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+.head{
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    position: relative;
+}
+.head li{
+    position: absolute;
+}
+.head .head1,
+.head .head2,
+.head .head3,
+.head .head4
+{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.head1{
+    background: url(images/top1.png) no-repeat;
+    background-size: 100% 100%;
+}
+.head2{
+    background: url(images/top2.png) no-repeat;
+    background-size: 100% 100%;
+}
+.head3{
+    background: url(images/top3.png) no-repeat;
+    background-size: 100% 100%;
+}
+.head4{
+    background: url(images/top4.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.main{
+    border: .04rem solid #D9B882;
+    width: 88%;
+    margin: 0.2rem auto 1rem;
+    margin-bottom: .2rem;
+    height:100%;
+    clear: both;
+}
+.main .shadow{
+    box-shadow: 0.14rem 0.14rem 0.36rem #000;
+    margin-top: .35rem;
+
+}
+.main li{
+    position: relative;
+    width: 100%;
+    height: 3.6rem;
+    z-index: -11;
+}
+
+ .main .f1{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+.main .first{
+    margin-top: 0;
+}
+
+
+.a1{
+    width: 100%;
+    height: 100%;
+    background: url('images/11.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f11{
+    width: 100%;
+    height: 100%;
+    background: url('images/12.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a2{
+    width: 100%;
+    height: 100%;
+    background: url('images/21.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f12{
+    width: 100%;
+    height: 100%;
+    background: url('images/22.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a3{
+    width: 100%;
+    height: 100%;
+    background: url('images/31.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f13{
+    width: 100%;
+    height: 100%;
+    background: url('images/32.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a4{
+    width: 100%;
+    height: 100%;
+    background: url('images/41.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f14{
+    width: 100%;
+    height: 100%;
+    background: url('images/42.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a5{
+    width: 100%;
+    height: 100%;
+    background: url('images/51.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f15{
+    width: 100%;
+    height: 100%;
+    background: url('images/52.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a6{
+    width: 100%;
+    height: 100%;
+    background: url('images/61.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f16{
+    width: 100%;
+    height: 100%;
+    background: url('images/62.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a7{
+    width: 100%;
+    height: 100%;
+    background: url('images/71.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f17{
+    width: 100%;
+    height: 100%;
+    background: url('images/72.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a8{
+    width: 100%;
+    height: 100%;
+    background: url('images/81.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f18{
+    width: 100%;
+    height: 100%;
+    background: url('images/82.png') no-repeat;
+    background-size: 100% 100%;
+}
+.a9{
+    width: 100%;
+    height: 100%;
+    background: url('images/91.png') no-repeat;
+    background-size: 100% 100%;
+}
+.f19{
+    width: 100%;
+    height: 100%;
+    background: url('images/92.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.contant{
+    height: 100%;
+}
+.contant .main .footer{
+    width: 100%;
+    height: 9.6rem;
+    margin-top: .35rem;
+    background: url('images/bot.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.first,.second,.three,.four,.five,.six,.seven,.eight,#end,.footer,.arrow{
+    display: none;
+}
+.f11,
+.f12,
+.f13,
+.f14,
+.f15,
+.f16,
+.f17,
+.f18,
+.f19
+{
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+.row{
+    width: 100%;
+    height: 100%;
+    background: burlywood;
+    font-size: 30px;
+    display: none;
+    opacity: 0;
+    filter:alpha(opacity=0);
+    position: relative;
+}
+.row img{
+    width: 100%;
+    animation: second 4s linear;
+}
+
+@keyframes second {
+    from{transform: scale(0.1);}
+    to{transform: scale(1);}
+}
+
+.commont{
+    animation: three 2s linear;
+}
+@keyframes three {
+    from{transform: scale(0.1);}
+    to{transform: scale(1);}
+}
+
+.arrow{
+    display: flex;
+    height: 1rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+@keyframes  first{
+    from{transform: scale(0.5);}
+    to{transform: scale(1.5);}
+}
+.arrow1{
+    position: absolute;
+    width: .6rem;
+    top: 15%;
+    left: 47%;
+    transform: rotate(180deg);
+    display: none;
+}
+.arrow1 img{
+    width: 100%;
+    animation: first 1s linear 1s infinite;
+}
+.text{
+    animation: six 4s linear;
+}
+@keyframes six {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+.back{
+    font-size: 0.25rem;
+    color: #333;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    font-family: inherit;
+}
+

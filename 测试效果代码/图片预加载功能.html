@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片预加载</title>
+    <script src="jQuery.js"></script>
+</head>
+<body>
+<ul>
+    <li><img id="s1" src="" alt=""></li>
+    <li><img id="s2" src="" alt=""></li>
+    <li><img id="s3" src="" alt=""></li>
+    <li><img id="s4" src="" alt=""></li>
+    <li><img id="s5" src="" alt=""></li>
+    <li><img id="s6" src="" alt=""></li>
+
+
+</ul>
+<input id="but" type="button" value="loadImage"/>
+<script>
+    window.onload=function () {
+        function loadImage(url, callback) {
+            var img = new Image();
+            img.src = url;
+            img.onload = function(){ //图片下载完毕时异步调用callback函数。
+                callback.call(img); // 将callback函数this指针切换为img。
+            };
+        }
+
+        var But=document.getElementById('but');
+        But.onclick=function () {
+            loadImage('images/11.png',imgLoaded)
+        }
+
+        function imgLoaded(){
+            $('#s1').attr('src','images/11.png')
+            $('#s2').attr('src','images/21.png')
+            $('#s3').attr('src','images/31.png')
+            $('#s4').attr('src','images/41.png')
+            $('#s5').attr('src','images/51.png')
+            $('#s6').attr('src','images/61.png')
+        }
+    }
+</script>
+</body>
+</html>

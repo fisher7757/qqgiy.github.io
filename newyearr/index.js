@@ -1,0 +1,218 @@
+/**
+ * Created by thmos on 2016/12/22.
+ */
+window.onload=function () {
+    var Head1 = $('.head1'),
+		Head2 = $('.head2'),
+		Head3 = $('.head3'),
+		Head4 = $('.head4'),
+
+		First = $('.first'),
+		Second = $('.second'),
+		Three = $('.three'),
+		Four = $('.four'),
+		Five = $('.five'),
+		Six = $('.six'),
+		Seven = $('.seven'),
+		Eight = $('.eight'),
+		Footer = $('.footer'),
+
+		F11 = $('.f11'),
+		F12 = $('.f12'),
+		F13 = $('.f13'),
+		F14 = $('.f14'),
+		F15 = $('.f15'),
+		F16 = $('.f16'),
+		F17 = $('.f17'),
+		F18 = $('.f18'),
+		Main = $('.main');
+
+    var Aad = $('.add');
+    Aad.css({
+        display: 'none'
+    });
+
+    //实现图片预加载***************************************************************
+    function loadImage(url, callback) {
+        var img = new Image();
+        img.src = url;
+        if (img.complete) { // 如果图片已经存在于浏览器缓存，直接调用回调函数
+            callback.call(img);
+           
+            return; // 直接返回，不用再处理onload事件
+
+        }
+        img.onload = function(){ //图片下载完毕时异步调用callback函数。
+            callback.call(img); // 将callback函数this指针切换为img。
+            console.dir(11);
+
+            
+            Head1.css({
+			opacity: '1'
+		});
+		setTimeout(function() {
+			Head2.animate({
+				opacity: '1'
+			}, 1000);
+		}, 0);
+		setTimeout(function() {
+			Head3.animate({
+				opacity: '1'
+			}, 1000);
+		}, 1000);
+		setTimeout(function() {
+			Head4.animate({
+				opacity: '1'
+			}, 1000);
+			Main.animate({opacity:'1'},500)
+		}, 1900);
+
+		setTimeout(function() {
+			First.css({
+				display: 'block'
+			});
+			First.animate({
+				opacity: '1'
+			}, 1000);
+			First.addClass('commont');
+			F11.animate({
+				opacity: '1'
+			}, 1000)
+		}, 2800);
+		setTimeout(function() {
+			Second.css({
+				display: 'block'
+			});
+			Second.animate({
+				opacity: '1'
+			}, 1000);
+			Second.addClass('commont');
+			F12.animate({
+				opacity: '1'
+			}, 1000)
+		}, 3000);
+
+		setTimeout(function() {
+			Three.css({
+				display: 'block'
+			});
+			Three.animate({
+				opacity: '1'
+			}, 1000);
+			Three.addClass('commont');
+			F13.animate({
+				opacity: '1'
+			}, 1000)
+		}, 3200);
+
+
+	$(window).scroll(function() {
+		var top = document.body.scrollTop || document.documentElement.scrollTop;
+		addEventListener('scroll', function() {
+			if(top > 10) {
+				Four.css({
+					display: 'block'
+				});
+				Four.addClass('commont');
+				setTimeout(function() {
+					F14.animate({
+						opacity: '1'
+					}, 1000)
+				}, 1000)
+			}
+			if(top > 160) {
+				Five.css({
+					display: 'block'
+				});
+				Five.addClass('commont');
+				setTimeout(function() {
+					F15.animate({
+						opacity: '1'
+					}, 1000)
+				}, 1000)
+			}
+			if(top > 340) {
+				Six.css({
+					display: 'block'
+				});
+				Six.addClass('commont');
+				setTimeout(function() {
+					F16.animate({
+						opacity: '1'
+					}, 1000)
+				}, 1000)
+			}
+			if(top > 510) {
+				Seven.css({
+					display: 'block'
+				});
+				Seven.addClass('commont');
+				setTimeout(function() {
+					F17.animate({
+						opacity: '1'
+					}, 1000)
+				}, 1000)
+			}
+			if(top > 670) {
+				Eight.css({
+					display: 'block'
+				});
+				Eight.addClass('commont');
+				setTimeout(function() {
+					F18.animate({
+						opacity: '1'
+					}, 1000)
+				}, 1000)
+			}
+			if(top > 860) {
+				Footer.css({
+					display: 'block'
+				});
+				Footer.animate({
+					opacity: '1'
+				}, 6000);
+				Footer.addClass('commont');
+			}
+		}, false)
+	});
+
+        };
+    }
+        loadImage('images/11.png',imgLoaded);
+        loadImage('images/12.png',imgLoaded);
+        loadImage('images/21.png',imgLoaded);
+        loadImage('images/22.png',imgLoaded);
+        loadImage('images/31.png',imgLoaded);
+        loadImage('images/32.png',imgLoaded);
+        loadImage('images/41.png',imgLoaded);
+        loadImage('images/42.png',imgLoaded);
+        loadImage('images/51.png',imgLoaded);
+        loadImage('images/52.png',imgLoaded);
+        loadImage('images/61.png',imgLoaded);
+        loadImage('images/62.png',imgLoaded);
+        loadImage('images/71.png',imgLoaded);
+        loadImage('images/72.png',imgLoaded);
+        loadImage('images/81.png',imgLoaded);
+        loadImage('images/82.png',imgLoaded);
+    function imgLoaded(){
+        $('.a1 img').attr('src','images/11.png');
+        $('.f11 img').attr('src','images/12.png');
+        $('.a2 img').attr('src','images/21.png');
+        $('.f12 img').attr('src','images/22.png');
+        $('.a3 img').attr('src','images/31.png');
+        $('.f13 img').attr('src','images/32.png');
+        $('.a4 img').attr('src','images/41.png');
+        $('.f14 img').attr('src','images/42.png');
+        $('.a5 img').attr('src','images/51.png');
+        $('.f15 img').attr('src','images/52.png');
+        $('.a6 img').attr('src','images/61.png');
+        $('.f16 img').attr('src','images/62.png');
+        $('.a7 img').attr('src','images/71.png');
+        $('.f17 img').attr('src','images/72.png');
+        $('.a8 img').attr('src','images/81.png');
+        $('.f18 img').attr('src','images/82.png');
+    }
+    //*************************************************************************
+
+		
+};
